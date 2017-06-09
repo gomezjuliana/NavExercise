@@ -1,7 +1,7 @@
 var express = require('express');
 var logger = require('morgan');
 var path = require('path');
-var api = require('./api');
+var api = require('./api/index');
 var app = express();
 
 app.use(logger('dev'));
