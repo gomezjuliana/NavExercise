@@ -1,37 +1,25 @@
 fetch('/api/nav.json')
-.then(function(response){
-	return response.json();
-})
-.then(function(data){
-	return createMenu(data);
-})
+.then(response => response.json())
+.then(createMenu)
 .catch(function(){
 	console.log('oops!');
 });
 
+let list = document.querySelector('.labels'); // identifies the ul
+
 function createMenu(data){
-	data.items.forEach(printFirstLevel);
+	data.items.forEach(element => printFirstLevel(element, list));
 }
 
-function printFirstLevel(element){
-	let li = document.createElement('li');
-	let textLabel = document.createTextNode(element.label);
-	li.appendChild(textLabel);
+function printFirstLevel(element, container){
+	let li = document.createElement('li'); //creates a li
+	let textLabel = document.createTextNode(element.label); // creates the text
+	li.appendChild(textLabel); // adds the text to the li
+	container.appendChild(li); // adds the li to the ul
 
-	let list = document.querySelector('.labels');
-	list.appendChild(li);
-	document.querySelector('.labels li').classList.add('bullet');
-	//checkForItems(element);
-}
-
-function checkForItems(element){
-	if (element.items.length === 0){
-		console.log('meow');
-	} else {
-		element.items.forEach(printSecondLevel);
-	}
-}
-
-function printSecondLevel(element){
-	console.log(element.label);
+	if (element.items.length && element.items.length > 0){
+		let ul = document.createElement('ul');
+		li.appendChild(ul);
+		element.items.forEach(subElement => printFirstLevel(subElement, ul));
+	} 
 }
