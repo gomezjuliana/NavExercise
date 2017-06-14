@@ -67,8 +67,9 @@
 	width: 80%;
 	position: absolute;
 	top: 60px;
-	height: 80%;
+	height: 640px;
 	padding-top: 12px;
+	overflow: hidden;
 }
 
 .second-level {
