@@ -24,6 +24,10 @@
 	left: 24px;
 }
 
+.navbar-toggle-open {
+	background-image: url(/images/HUGE-white.png);
+}
+
 .icon-bar {
 	background-color: #fff;
 	display: block;
@@ -34,6 +38,10 @@
 
 .icon-bar:last-child {
 	margin-bottom: 0;
+}
+
+.icon-bar-open {
+	display: none;
 }
 
 .first-level {
