@@ -62,9 +62,9 @@
 	line-height: 16px;
 }
 
-.nav-open {
+.nav-box {
+	width: 0;
 	background-color: #fff;
-	width: 80%;
 	position: absolute;
 	top: 60px;
 	height: 640px;
@@ -72,11 +72,23 @@
 	overflow: hidden;
 }
 
+.nav-open {
+	width: 80%;
+}
+
+.wrapper-menu-open {
+	width: 100%;
+	margin-left: 300px;
+	overflow-x: hidden;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
 .second-level {
 	font-family: 'Galaxie';
 	font-size: 16px;
 	line-height: 48px;
 	padding-left: 24px;
+	display: none;
 }
 
 .second-level a {
