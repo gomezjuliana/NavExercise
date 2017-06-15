@@ -9,6 +9,9 @@
 	vertical-align: baseline;
 }
 
+body {
+	overflow: hidden;
+}
 /*#Navigation*/
 
 .nav {
@@ -68,6 +71,10 @@
 	text-decoration: none;
 }
 
+.fa-chevron-down {
+	color: #ec008c;
+}
+
 .copyright {
 	position: absolute;
 	bottom: 20px;
@@ -96,10 +103,6 @@
 	margin-left: 300px;
 	overflow-x: hidden;
 	background-color: rgba(0, 0, 0, 0.5);
-}
-
-.wrapper4wrapper {
-	width: 72px;
 }
 
 .second-level {

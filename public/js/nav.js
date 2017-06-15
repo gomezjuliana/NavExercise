@@ -21,6 +21,13 @@ function printMenu(element, container, newClass){
 	container.appendChild(li); // adds the li to the ul
 
 	if (element.items && element.items.length > 0){
+		let i = document.createElement('i');
+		i.classList.add('fa');
+		i.classList.add('fa-chevron-down');
+		li.appendChild(i)
+	}
+
+	if (element.items && element.items.length > 0){
 		let ul = document.createElement('ul');
 		ul.classList.add('submenu')
 		li.appendChild(ul);
