@@ -33,6 +33,7 @@ document.querySelector('.navbar-toggle').addEventListener('click', sayHello);
 function sayHello(){
 	document.querySelector('.nav-box').classList.toggle('nav-open');
 	document.querySelector('.wrapper').classList.toggle('wrapper-menu-open');
-	document.querySelectorAll('.icon-bar').forEach(x => x.classList.toggle('icon-bar-open'));
+	document.querySelector('.icon-open').classList.toggle('icon-open-closed')
 	document.querySelector('.meow').classList.toggle('huge-toggle')
+	document.querySelector('.close').classList.toggle('close-open')
 }

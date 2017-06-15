@@ -17,37 +17,37 @@
 	height: 60px;
 }
 
-.navbar-toggle {
-	background-color: #ec008c;
-	position: absolute;
-	top: 20px;
-	left: 24px;
-}
-
-.icon-bar {
-	background-color: #fff;
+.icon-open {
 	display: block;
-	width: 24px;
-	height: 4px;
-	margin-bottom: 5px;
+	position: absolute;
+	top: -5px;
+	left: 0;
 }
 
-.icon-bar:last-child {
-	margin-bottom: 0;
-}
-
-.icon-bar-open {
+.icon-open-closed {
 	display: none;
+}
+
+.close {
+	display: none;
+}
+
+.close-open {
+	display: block;
+	position: absolute;
+	right: 0;
+	top: -5px;
 }
 
 .meow {
 	display: none;
 }
+
 .huge-toggle {
 	width: 50px;
 	position: absolute;
-	top: 0px;
-	left: 0px;
+	top: 20px;
+	left: 24px;
 	display: block;
 }
 
