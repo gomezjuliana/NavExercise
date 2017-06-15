@@ -20,18 +20,18 @@ body {
 	height: 60px;
 }
 
-.icon-open {
+.navbar-icon-open {
 	display: block;
 	position: absolute;
 	top: -5px;
 	left: 0;
 }
 
-.icon-open-closed {
+.icon-open-hide {
 	display: none;
 }
 
-.close {
+.navbar-icon-close {
 	display: none;
 }
 
@@ -42,7 +42,7 @@ body {
 	top: -5px;
 }
 
-.meow {
+.huge-logo-white {
 	display: none;
 }
 

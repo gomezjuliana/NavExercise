@@ -35,12 +35,12 @@ function printMenu(element, container, newClass){
 	} 
 }
 
-document.querySelector('.navbar-toggle').addEventListener('click', sayHello);
+document.querySelector('.navbar-toggle').addEventListener('click', menuToggle);
 
-function sayHello(){
+function menuToggle(){
 	document.querySelector('.nav-box').classList.toggle('nav-open');
 	document.querySelector('.wrapper').classList.toggle('wrapper-menu-open');
-	document.querySelector('.icon-open').classList.toggle('icon-open-closed')
-	document.querySelector('.meow').classList.toggle('huge-toggle')
-	document.querySelector('.close').classList.toggle('close-open')
+	document.querySelector('.navbar-icon-open').classList.toggle('icon-open-hide')
+	document.querySelector('.huge-logo-white').classList.toggle('huge-toggle')
+	document.querySelector('.navbar-icon-close').classList.toggle('close-open')
 }
