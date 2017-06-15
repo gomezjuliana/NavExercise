@@ -20,11 +20,16 @@ function printMenu(element, container, newClass){
 	a.appendChild(textLabel); // adds the text to the li
 	container.appendChild(li); // adds the li to the ul
 
+	if (newClass == 'first-level'){
+		a.classList.add('first-level-link')
+	}
+
 	if (element.items && element.items.length > 0){
 		let i = document.createElement('i');
 		i.classList.add('fa');
 		i.classList.add('fa-chevron-down');
 		li.appendChild(i)
+		li.addEventListener('click', () => openSecondMenu(i));
 	}
 
 	if (element.items && element.items.length > 0){
@@ -43,4 +48,15 @@ function menuToggle(){
 	document.querySelector('.navbar-icon-open').classList.toggle('icon-open-hide')
 	document.querySelector('.huge-logo-white').classList.toggle('huge-toggle')
 	document.querySelector('.navbar-icon-close').classList.toggle('close-open')
+}
+
+function openSecondMenu(i){
+	document.querySelector('.submenu').classList.toggle('submenu-open');
+	if (i.classList.contains('fa-chevron-down')){
+		i.classList.remove('fa-chevron-down');
+		i.classList.add('fa-chevron-up');
+	} else {
+		i.classList.remove('fa-chevron-up');
+		i.classList.add('fa-chevron-down');
+	}
 }
