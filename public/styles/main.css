@@ -59,6 +59,7 @@ body {
 	font-size: 21px;
 	line-height: 48px;
 	padding-left: 24px;
+	position: relative;
 }
 
 .first-level:hover {
@@ -69,10 +70,14 @@ body {
 .first-level a {
 	color: #000;
 	text-decoration: none;
+	float: left;
 }
 
 .fa-chevron-down {
 	color: #ec008c;
+	float: right;
+	margin-top: 13px;
+	margin-right: 20px;
 }
 
 .copyright {
