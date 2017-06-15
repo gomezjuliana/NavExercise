@@ -45,6 +45,7 @@ document.querySelector('.navbar-toggle').addEventListener('click', menuToggle);
 function menuToggle(){
 	document.querySelector('.nav-box').classList.toggle('nav-open');
 	document.querySelector('.wrapper').classList.toggle('wrapper-menu-open');
+	document.querySelector('.container').classList.toggle('container-open');
 	document.querySelector('.navbar-icon-open').classList.toggle('icon-open-hide')
 	document.querySelector('.huge-logo-white').classList.toggle('huge-toggle')
 	document.querySelector('.navbar-icon-close').classList.toggle('close-open')
