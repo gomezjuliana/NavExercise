@@ -24,10 +24,6 @@
 	left: 24px;
 }
 
-.navbar-toggle-open {
-	background-image: url(/images/HUGE-white.png);
-}
-
 .icon-bar {
 	background-color: #fff;
 	display: block;
@@ -42,6 +38,17 @@
 
 .icon-bar-open {
 	display: none;
+}
+
+.meow {
+	display: none;
+}
+.huge-toggle {
+	width: 50px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: block;
 }
 
 .first-level {
