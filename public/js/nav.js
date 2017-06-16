@@ -28,8 +28,8 @@ function printMenu(element, container, newClass){
 		let i = document.createElement('i');
 		i.classList.add('fa');
 		i.classList.add('fa-chevron-down');
-		li.appendChild(i)
-		li.addEventListener('click', () => openSecondMenu(i));
+		li.appendChild(i);
+		li.addEventListener('click', () => openSecondMenu(i, ul));
 	}
 
 	if (element.items && element.items.length > 0){
@@ -37,7 +37,7 @@ function printMenu(element, container, newClass){
 		ul.classList.add('submenu')
 		li.appendChild(ul);
 		element.items.forEach(subElement => printMenu(subElement, ul, 'second-level'));
-	} 
+	}
 }
 
 document.querySelector('.navbar-toggle').addEventListener('click', menuToggle);
@@ -51,8 +51,9 @@ function menuToggle(){
 	document.querySelector('.navbar-icon-close').classList.toggle('close-open')
 }
 
-function openSecondMenu(i){
-	document.querySelector('.submenu').classList.toggle('submenu-open');
+function openSecondMenu(i, ul){
+	console.log(ul);
+	document.querySelector('.'+e.target.classList.value).classList.toggle('submenu-open');
 	if (i.classList.contains('fa-chevron-down')){
 		i.classList.remove('fa-chevron-down');
 		i.classList.add('fa-chevron-up');
