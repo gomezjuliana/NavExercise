@@ -20,19 +20,21 @@ function printMenu(element, container, newClass){
 	a.appendChild(textLabel); // adds the text to the li
 	container.appendChild(li); // adds the li to the ul
 
+	if (newClass == 'first-level'){
+		a.classList.add('first-level-link')
+	}
+
 	if (element.items && element.items.length > 0){
 		let i = document.createElement('i');
 		i.classList.add('fa');
 		i.classList.add('fa-chevron-down');
-		li.appendChild(i)
-	}
-
-	if (element.items && element.items.length > 0){
+		li.appendChild(i);
 		let ul = document.createElement('ul');
 		ul.classList.add('submenu')
 		li.appendChild(ul);
 		element.items.forEach(subElement => printMenu(subElement, ul, 'second-level'));
-	} 
+		li.addEventListener('click', () => openSecondMenu(i, ul));
+	}
 }
 
 document.querySelector('.navbar-toggle').addEventListener('click', menuToggle);
@@ -40,7 +42,32 @@ document.querySelector('.navbar-toggle').addEventListener('click', menuToggle);
 function menuToggle(){
 	document.querySelector('.nav-box').classList.toggle('nav-open');
 	document.querySelector('.wrapper').classList.toggle('wrapper-menu-open');
+	document.querySelector('.container').classList.toggle('container-open');
 	document.querySelector('.navbar-icon-open').classList.toggle('icon-open-hide')
 	document.querySelector('.huge-logo-white').classList.toggle('huge-toggle')
 	document.querySelector('.navbar-icon-close').classList.toggle('close-open')
 }
+
+function openSecondMenu(i, ul){
+	ul.classList.toggle('submenu-open');
+	ul.parentElement.classList.toggle('first-level-submenu-active')
+	if (i.classList.contains('fa-chevron-down')){
+		i.classList.remove('fa-chevron-down');
+		i.classList.add('fa-chevron-up');
+	} else {
+		i.classList.remove('fa-chevron-up');
+		i.classList.add('fa-chevron-down');
+	}
+}
+
+document.addEventListener('click', function(event) {
+	let isClickInside = document.querySelector('.nav').contains(event.target);
+	if (!isClickInside) {
+		document.querySelector('.nav-box').classList.remove('nav-open');
+		document.querySelector('.wrapper').classList.remove('wrapper-menu-open');
+		document.querySelector('.container').classList.remove('container-open');
+		document.querySelector('.navbar-icon-open').classList.remove('icon-open-hide')
+		document.querySelector('.huge-logo-white').classList.remove('huge-toggle')
+		document.querySelector('.navbar-icon-close').classList.remove('close-open')
+	}
+});
