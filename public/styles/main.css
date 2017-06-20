@@ -203,17 +203,22 @@
 	}
 
 	.nav-box {
-		width: 100%;
+		width: 80%;
 		height: auto;
 		position: relative;
 		top: -20px;
 		left: 108px;
 		background-color: #ec008c;	
+		overflow: visible;
 	}
 
 	.container-open {
 		margin-left: 0;
 		overflow-x: visible;
+	}
+
+	.nav-container {
+		overflow: visible;
 	}
 
 	.wrapper-menu-open {
@@ -243,6 +248,18 @@
 		display: none;
 	}
 
+	.submenu {
+		z-index: 1;
+	}
+
+	.submenu-open {
+		position: absolute;
+		background-color: #fff;
+		width: 200px;
+		top: 60px;
+		left: 0;
+	}
+
 	.fig-box {
 		height: 640px;
 	}
@@ -250,8 +267,8 @@
 	.headline-box {
 		position: absolute;
 		top: 155px;
-		padding-right: 7.5%;
-		padding-left: 7.5%;
+		width: 100%;
+		text-align: center;
 	}
 
 	.headline {
@@ -265,5 +282,6 @@
 		padding-top: 60px;
 		font-size: 24px;
 		line-height: 36px;
+		margin: 0 auto;
 	}
 }
