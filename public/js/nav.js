@@ -29,14 +29,11 @@ function printMenu(element, container, newClass){
 		i.classList.add('fa');
 		i.classList.add('fa-chevron-down');
 		li.appendChild(i);
-		li.addEventListener('click', () => openSecondMenu(i, ul));
-	}
-
-	if (element.items && element.items.length > 0){
 		let ul = document.createElement('ul');
 		ul.classList.add('submenu')
 		li.appendChild(ul);
 		element.items.forEach(subElement => printMenu(subElement, ul, 'second-level'));
+		li.addEventListener('click', () => openSecondMenu(i, ul));
 	}
 }
 
@@ -52,8 +49,8 @@ function menuToggle(){
 }
 
 function openSecondMenu(i, ul){
-	console.log(ul);
-	document.querySelector('.'+e.target.classList.value).classList.toggle('submenu-open');
+	ul.classList.toggle('submenu-open');
+	ul.parentElement.classList.toggle('first-level-submenu-active')
 	if (i.classList.contains('fa-chevron-down')){
 		i.classList.remove('fa-chevron-down');
 		i.classList.add('fa-chevron-up');
@@ -62,3 +59,15 @@ function openSecondMenu(i, ul){
 		i.classList.add('fa-chevron-down');
 	}
 }
+
+document.addEventListener('click', function(event) {
+	let isClickInside = document.querySelector('.nav').contains(event.target);
+	if (!isClickInside) {
+		document.querySelector('.nav-box').classList.remove('nav-open');
+		document.querySelector('.wrapper').classList.remove('wrapper-menu-open');
+		document.querySelector('.container').classList.remove('container-open');
+		document.querySelector('.navbar-icon-open').classList.remove('icon-open-hide')
+		document.querySelector('.huge-logo-white').classList.remove('huge-toggle')
+		document.querySelector('.navbar-icon-close').classList.remove('close-open')
+	}
+});

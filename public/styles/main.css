@@ -29,7 +29,7 @@
 }
 
 .navbar-icon-close {
-	display: none;
+	display: none
 }
 
 .close-open {
@@ -40,7 +40,8 @@
 }
 
 .huge-logo-white {
-	display: none;
+	width: 0;
+	transition: width 0.8s;
 }
 
 .huge-toggle {
@@ -70,6 +71,18 @@
 	float: left;
 }
 
+.first-level-link:hover {
+	color: #ec008c;
+}
+
+.first-level-submenu-active:hover {
+	background-color: #fff;
+}
+
+.second-level:hover {
+	background-color: #eee;
+}
+
 .fa-chevron-down,
 .fa-chevron-up {
 	color: #ec008c;
@@ -87,14 +100,19 @@
 	line-height: 16px;
 }
 
+.nav-container {
+	overflow: hidden;
+}
+
 .nav-box {
 	width: 0;
 	background-color: #fff;
 	position: absolute;
 	top: 60px;
-	height: 640px;
+	height: 100vh;
 	padding-top: 12px;
 	overflow: hidden;
+	transition: width 0.8s;
 }
 
 .nav-open {
