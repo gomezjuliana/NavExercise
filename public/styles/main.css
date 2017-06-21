@@ -1,5 +1,4 @@
 @import "fonts.css";
-
 * {
 	margin: 0;
 	padding: 0;
@@ -16,34 +15,28 @@
 	background-color: #ec008c;
 	height: 60px;
 }
-
 .navbar-icon-open {
 	display: block;
 	position: absolute;
 	top: -5px;
 	left: 0;
 }
-
 .icon-open-hide {
 	display: none;
 }
-
 .navbar-icon-close {
 	display: none
 }
-
 .close-open {
 	display: block;
 	position: absolute;
 	right: 0;
 	top: -5px;
 }
-
 .huge-logo-white {
 	width: 0;
 	transition: width 0.8s;
 }
-
 .huge-toggle {
 	width: 50px;
 	position: absolute;
@@ -51,7 +44,6 @@
 	left: 24px;
 	display: block;
 }
-
 .first-level {
 	font-family: 'HUGEAvantGardeBold';
 	font-size: 21px;
@@ -59,38 +51,30 @@
 	padding-left: 24px;
 	position: relative;
 }
-
 .first-level:hover {
 	background-color: #eee;
 	cursor: pointer;
 }
-
 .first-level-link {
 	color: #000;
 	text-decoration: none;
 	float: left;
 }
-
 .first-level-link:hover {
 	color: #ec008c;
 }
-
 .first-level-submenu-active:hover {
 	background-color: #fff;
 }
-
 .second-level:hover {
 	background-color: #eee;
 }
-
-.fa-chevron-down,
-.fa-chevron-up {
+.fa-chevron-down, .fa-chevron-up {
 	color: #ec008c;
 	float: right;
 	margin-top: 13px;
 	margin-right: 20px;
 }
-
 .copyright {
 	position: absolute;
 	bottom: 20px;
@@ -99,11 +83,12 @@
 	font-size: 12px;
 	line-height: 16px;
 }
-
+.copyright-open {
+	display: none;
+}
 .nav-container {
 	overflow: hidden;
 }
-
 .nav-box {
 	width: 0;
 	background-color: #fff;
@@ -111,25 +96,21 @@
 	top: 60px;
 	height: 100vh;
 	padding-top: 12px;
-	overflow: hidden;
+	overflow: scroll;
 	transition: width 0.8s;
 }
-
 .nav-open {
 	width: 80%;
 }
-
 .wrapper-menu-open {
 	width: 100vw;
 	background-color: rgba(0, 0, 0, 0.5);
 }
-
 .container-open {
 	width: calc(100vw - 300px);
 	overflow-x: hidden;
 	margin-left: 300px;
 }
-
 .second-level {
 	font-family: 'Galaxie';
 	font-size: 16px;
@@ -141,22 +122,20 @@
 	color: #000;
 	text-decoration: none;
 }
-
 .second-level a:hover {
 	color: #ec008c;
 }
-
 .submenu {
 	list-style-type: none;
 	clear: both;
 	display: none;
 }
-
 .submenu-open {
 	display: block;
 }
 
 /*Header*/
+
 .fig-box {
 	background-image: url(/images/background-image.jpg);
 	background-size: cover;
@@ -164,7 +143,6 @@
 	background-position: center center;
 	background-repeat: no-repeat;
 }
-
 .headline {
 	font-family: 'HUGEAvantGardeBold';
 	font-size: 44px;
@@ -174,14 +152,109 @@
 }
 
 /*Body Copy*/
+
 .body-copy {
 	font-family: 'Galaxie';
 	font-size: 12px;
 	line-height: 24px;
 	text-align: justify;
 }
-
 .text {
 	padding-left: 24px;
 	padding-right: 24px;
+}
+@media (min-width: 769px) {
+	.nav {
+		height: 72px;
+	}
+	.navbar-icon-open {
+		display: none;
+	}
+	.huge-logo-white {
+		width: 60px;
+		position: absolute;
+		left: 24px;
+		top: 24px;
+	}
+	.nav-box {
+		width: 80%;
+		height: auto;
+		position: relative;
+		top: 0;
+		left: 108px;
+		background-color: #ec008c;
+		overflow: visible;
+		padding-top: 0;
+	}
+	.close-open {
+		display: none;
+	}
+	.container-open {
+		margin-left: 0;
+		overflow-x: visible;
+		width: auto;
+	}
+	.nav-container {
+		overflow: visible;
+	}
+	.navbar-toggle {
+		display: block;
+	}
+	.wrapper-menu-open {
+		background-color: transparent;
+		width: auto;
+	}
+	.labels {
+		height: 72px;
+	}
+	.first-level {
+		display: inline-block;
+		padding-right: 24px;
+		padding-bottom: 0;
+		padding-top: 0;
+	}
+	.first-level-link {
+		color: #fff;
+		line-height: 72px;
+	}
+	.first-level:hover {
+		background-color: #fff;
+	}
+	.copyright {
+		display: none;
+	}
+	.fa {
+		display: none;
+	}
+	.submenu {
+		z-index: 1;
+	}
+	.submenu-open {
+		position: absolute;
+		background-color: #fff;
+		width: 225px;
+		top: 72px;
+		left: 0;
+	}
+	.fig-box {
+		height: 640px;
+	}
+	.headline-box {
+		position: absolute;
+		top: 155px;
+		width: 100%;
+		text-align: center;
+	}
+	.headline {
+		font-size: 120px;
+		line-height: 132px;
+		color: #fff;
+	}
+	.body-copy {
+		width: 968px;
+		padding-top: 60px;
+		font-size: 24px;
+		line-height: 36px;
+		margin: 0 auto;
+	}
 }
