@@ -186,7 +186,7 @@
 	padding-right: 24px;
 }
 
-@media (min-width: 768px){
+@media (min-width: 769px){
 	.nav {
 		height: 72px;
 	}
@@ -206,34 +206,50 @@
 		width: 80%;
 		height: auto;
 		position: relative;
-		top: -20px;
+		top: 0;
 		left: 108px;
 		background-color: #ec008c;	
 		overflow: visible;
+		padding-top: 0;
+	}
+
+	.close-open {
+		display: none;
 	}
 
 	.container-open {
 		margin-left: 0;
 		overflow-x: visible;
+		width: auto;
 	}
 
 	.nav-container {
 		overflow: visible;
 	}
 
+	.navbar-toggle {
+		display: block;
+	}
+
 	.wrapper-menu-open {
 		background-color: transparent;
+		width: auto;
+	}
+
+	.labels {
+		height: 72px;
 	}
 
 	.first-level {
 		display: inline-block;
 		padding-right: 24px;
-		padding-bottom: 5px;
-		padding-top: 5px;
+		padding-bottom: 0;
+		padding-top: 0;
 	}
 
 	.first-level-link {
 		color: #fff;
+		line-height: 72px;
 	}
 
 	.first-level:hover {
