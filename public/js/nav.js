@@ -1,25 +1,27 @@
-fetch('/api/nav.json').then(response => response.json()).then(createMenu).catch(function() {
-	console.log('oops!');
-});
+(function(){fetch('/api/nav.json')
+.then(response => response.json())
+.then(createMenu).catch(() => console.log('Oops! Something went wrong'))})();
 
 function createMenu(data) {
-	let list = document.querySelector('.labels'); // identifies the ul
+	let list = document.querySelector('.labels'); 
 	data.items.forEach(element => printMenu(element, list, 'first-level'));
 }
 
 function printMenu(element, container, newClass) {
-	let li = document.createElement('li'); //creates a li
+	let li = document.createElement('li'); 
 	li.classList.add(newClass);
 	let a = document.createElement('a');
 	a.href = element.url;
+	a.target = "_blank";
 	li.appendChild(a);
-	let textLabel = document.createTextNode(element.label); // creates the text
-	a.appendChild(textLabel); // adds the text to the li
-	container.appendChild(li); // adds the li to the ul
-	if (newClass == 'first-level') {
+	let textLabel = document.createTextNode(element.label); 
+	a.appendChild(textLabel); 
+	container.appendChild(li); 
+	if (newClass === 'first-level') {
 		a.classList.add('first-level-link')
 	}
 	if (element.items && element.items.length > 0) {
+		a.target = "";
 		let i = document.createElement('i');
 		i.classList.add('fa');
 		i.classList.add('fa-chevron-down');

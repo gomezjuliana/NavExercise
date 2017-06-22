@@ -1,25 +1,24 @@
 @import "fonts.css";
 * {
+	border: 0;
+	font-size: 100%;
 	margin: 0;
 	padding: 0;
-	border: 0;
-	outline: 0;
-	font-size: 100%;
 	vertical-align: baseline;
 }
 
 /*#Navigation*/
 
 .nav {
-	width: 100%;
 	background-color: #ec008c;
 	height: 60px;
+	width: 100%;
 }
 .navbar-icon-open {
 	display: block;
+	left: 0;
 	position: absolute;
 	top: -5px;
-	left: 0;
 }
 .icon-open-hide {
 	display: none;
@@ -34,15 +33,15 @@
 	top: -5px;
 }
 .huge-logo-white {
-	width: 0;
 	transition: width 0.8s;
+	width: 0;
 }
 .huge-toggle {
-	width: 50px;
+	display: block;
+	left: 24px;
 	position: absolute;
 	top: 20px;
-	left: 24px;
-	display: block;
+	width: 50px;
 }
 .first-level {
 	font-family: 'HUGEAvantGardeBold';
@@ -57,8 +56,8 @@
 }
 .first-level-link {
 	color: #000;
-	text-decoration: none;
 	float: left;
+	text-decoration: none;
 }
 .first-level-link:hover {
 	color: #ec008c;
@@ -72,16 +71,16 @@
 .fa-chevron-down, .fa-chevron-up {
 	color: #ec008c;
 	float: right;
-	margin-top: 13px;
 	margin-right: 20px;
+	margin-top: 13px;
 }
 .copyright {
-	position: absolute;
 	bottom: 20px;
-	left: 24px;
 	font-family: 'HelveticaNeueRegular';
 	font-size: 12px;
+	left: 24px;
 	line-height: 16px;
+	position: absolute;
 }
 .copyright-open {
 	display: none;
@@ -90,33 +89,33 @@
 	overflow: hidden;
 }
 .nav-box {
-	width: 0;
 	background-color: #fff;
+	height: 100vh;
+	overflow: scroll;
+	padding-top: 12px;
 	position: absolute;
 	top: 60px;
-	height: 100vh;
-	padding-top: 12px;
-	overflow: scroll;
 	transition: width 0.8s;
+	width: 0;
 }
 .nav-open {
 	width: 80%;
 }
 .wrapper-menu-open {
-	width: 100vw;
 	background-color: rgba(0, 0, 0, 0.5);
+	width: 100vw;
 }
 .container-open {
-	width: calc(100vw - 300px);
-	overflow-x: hidden;
 	margin-left: 300px;
+	overflow-x: hidden;
+	width: calc(100vw - 300px)	
 }
 .second-level {
+	display: block;
 	font-family: 'Galaxie';
 	font-size: 16px;
 	line-height: 48px;
 	padding-left: 24px;
-	display: block;
 }
 .second-level a {
 	color: #000;
@@ -126,9 +125,9 @@
 	color: #ec008c;
 }
 .submenu {
-	list-style-type: none;
 	clear: both;
 	display: none;
+	list-style-type: none;	
 }
 .submenu-open {
 	display: block;
@@ -138,17 +137,17 @@
 
 .fig-box {
 	background-image: url(/images/background-image.jpg);
-	background-size: cover;
-	height: 240px;
 	background-position: center center;
 	background-repeat: no-repeat;
+	background-size: cover;
+	height: 240px;
 }
 .headline {
 	font-family: 'HUGEAvantGardeBold';
 	font-size: 44px;
 	line-height: 48px;
-	padding-top: 50px;
 	padding-bottom: 50px;
+	padding-top: 50px;
 }
 
 /*Body Copy*/
@@ -171,20 +170,20 @@
 		display: none;
 	}
 	.huge-logo-white {
-		width: 60px;
-		position: absolute;
 		left: 24px;
+		position: absolute;
 		top: 24px;
+		width: 60px;
 	}
 	.nav-box {
-		width: 80%;
-		height: auto;
-		position: relative;
-		top: 0;
-		left: 108px;
 		background-color: #ec008c;
+		height: auto;
+		left: 108px;
 		overflow: visible;
 		padding-top: 0;
+		position: relative;
+		top: 0;
+		width: 80%;
 	}
 	.close-open {
 		display: none;
@@ -209,8 +208,8 @@
 	}
 	.first-level {
 		display: inline-block;
-		padding-right: 24px;
 		padding-bottom: 0;
+		padding-right: 24px;
 		padding-top: 0;
 	}
 	.first-level-link {
@@ -230,31 +229,31 @@
 		z-index: 1;
 	}
 	.submenu-open {
-		position: absolute;
 		background-color: #fff;
-		width: 225px;
-		top: 72px;
 		left: 0;
+		position: absolute;
+		top: 72px;
+		width: 225px;		
 	}
 	.fig-box {
 		height: 640px;
 	}
 	.headline-box {
 		position: absolute;
+		text-align: center;
 		top: 155px;
 		width: 100%;
-		text-align: center;
 	}
 	.headline {
+		color: #fff;
 		font-size: 120px;
 		line-height: 132px;
-		color: #fff;
 	}
 	.body-copy {
-		width: 968px;
-		padding-top: 60px;
 		font-size: 24px;
 		line-height: 36px;
 		margin: 0 auto;
+		padding-top: 60px;
+		width: 968px;
 	}
 }
